@@ -8,7 +8,6 @@ body {
 }
 .container-content {
 	max-width: 1372px;
-	/* max-height: 640px; */
 }
 .links {
 	display: flex;
@@ -76,18 +75,17 @@ body {
 	display: flex;
 	border: 1px solid #e1e1e6;
 	border-bottom: none;
-	padding: 24px 50px 0 40px;
+	/* padding: 24px 50px 0 40px; */
+	padding-top: 24px;
 	margin: 0 22px;
 	box-sizing: border-box;
 	overflow: hidden;
 }
 .slide-wrap {
-	/* max-width: 1328px; */
 	max-height: 504px;
 	display: flex;
 	box-sizing: border-box;
 	width: fit-content;
-	/* overflow: hidden; */
 	transition: 2s ease;
 }
 .slide-pagination {
