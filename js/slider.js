@@ -1,5 +1,5 @@
 export class Slider {
-  constructor(selector, config) {
+  constructor(selector) {
     this.mainElement = document.querySelector(selector)
     this.sliderPagination = this.mainElement.querySelector('.slide-pagination')
     this.slideWrap = this.mainElement.querySelector('.slide-wrap')
