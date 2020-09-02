@@ -1,0 +1,248 @@
+@textActive: #19191e;
+@text: #8f8f9d;
+@textDescription: #4a4a4f;
+@border: #e1e1e6;
+@pagination: #191928;
+@paginationActive: #24c;
+@promo: #fa0;
+@oldPrice: #6c6c71;
+body {
+	font-family: Roboto, sans-serif;
+	height: 100vh;
+}
+.main-container {
+	display: flex;
+	align-items: center;
+}
+.container-content {
+	max-width: 1372px;
+}
+.links {
+	display: flex;
+	position: relative;
+	margin: 0 22px 16px;
+}
+.best-goods {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 40px;
+	color: @textActive;
+	margin-bottom: 0;
+}
+.all-goods {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 700;
+	margin: auto 0 3px 24px;
+	font-size: 12px;
+	line-height: 20px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: @text;
+	cursor: pointer;
+}
+.info {
+	margin: 0 22px 32px;
+}
+.text {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	font-feature-settings: "pnum" on, "lnum" on;
+	color: @textDescription;
+}
+.slider {
+	position: relative;
+}
+.slider-button {
+	position: absolute;
+	border: none;
+	border-radius: 2px;
+	background: white;
+	-webkit-filter: drop-shadow(0 4px 32px rgba(0, 0, 0, 0.1));
+	filter: drop-shadow(0 4px 32px rgba(0, 0, 0, 0.1));
+	width: 44px;
+	height: 44px;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: calc(50% - 44px);
+	z-index: 5;
+}
+.left-button {
+	left: 0;
+	background-image: url(../img/left-arrow.svg);
+}
+.right-button {
+	right: 0;
+	background-image: url(../img/right-arrow.svg);
+}
+.slider-container {
+	display: flex;
+	border: 1px solid @border;
+	border-bottom: none;
+	padding-top: 24px;
+	margin: 0 22px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.slide-wrap {
+	max-height: 504px;
+	display: flex;
+	box-sizing: border-box;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	transition: 2s ease;
+}
+.slide-pagination {
+	padding: 28px 0 40px;
+	display: flex;
+	justify-content: center;
+	border: 1px solid @border;
+	border-top: none;
+	margin: 0 22px;
+}
+.wrap-pagination-buttons {
+	display: flex;
+}
+.pagination-button {
+	background: @pagination;
+	opacity: 0.5;
+	width: 16px;
+	height: 4px;
+	margin: 0 4px;
+	cursor: pointer;
+}
+.pagination-button_active {
+	width: 24px;
+	background: @paginationActive;
+	opacity: 1;
+}
+.slide {
+	display: flex;
+	max-width: 1236px;
+	width: 1236px;
+}
+.img-container {
+	padding: 36px 30px 38px;
+}
+.info-container {
+	margin-left: 40px;
+	padding-top: 16px;
+}
+.promo {
+	background: @promo;
+	opacity: 0.7;
+	width: 50px;
+	height: 22px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 2px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 16px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: white;
+}
+.name {
+	font-style: normal;
+	font-weight: 700;
+	margin: 18px 0 0 0;
+	font-size: 24px;
+	line-height: 32px;
+	color: @textActive;
+}
+.description {
+	font-style: normal;
+	font-weight: 400;
+	margin: 16px 0 0 0;
+	font-size: 16px;
+	line-height: 24px;
+	color: @textDescription;
+}
+.characters {
+	padding: 32px 0;
+	border-bottom: 1px solid @border;
+	display: flex;
+	margin-bottom: 16px;
+}
+.characters-col {
+	flex: 1;
+}
+.characters-col:nth-child(2) {
+	margin-left: 32px;
+}
+.characters-row:nth-child(2) {
+	margin-bottom: 0;
+}
+.characters-row {
+	margin-bottom: 8px;
+	display: flex;
+}
+.property-name,
+.property-value {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+	color: @oldPrice;
+	margin: 0;
+}
+.separator {
+	flex: 1;
+	margin: 0 8px;
+	position: relative;
+}
+.separator::before {
+	position: absolute;
+	content: "";
+	border-bottom: 1px dashed @text;
+	bottom: 8px;
+	left: 0;
+	right: 0;
+}
+.buy {
+	display: flex;
+	align-items: center;
+}
+.price {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: right;
+	color: #323237;
+	margin: 0;
+}
+.price-old {
+	font-style: normal;
+	font-weight: 400;
+	margin: 0 0 0 16px;
+	font-size: 14px;
+	line-height: 22px;
+	-webkit-text-decoration-line: line-through;
+	text-decoration-line: line-through;
+	color: @oldPrice;
+	flex: 1;
+}
+.more-info {
+	padding: 12px 24px;
+	background: @paginationActive;
+	border-radius: 4px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: white;
+	border: none;
+}
