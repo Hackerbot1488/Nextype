@@ -1,4 +1,4 @@
-export class Slider {
+class Slider {
   constructor(selector) {
     this.mainElement = document.querySelector(selector)
     this.sliderPagination = this.mainElement.querySelector('.slide-pagination')
